@@ -4,19 +4,19 @@ import Login from "./pages/Login/login";
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Login/>
+    path: "/",
+    element: <Login />,
   },
   {
-    element:<Layout/>,
-    children:[
+    element: <Layout />,
+    children: [
       {
-        path:"/home",
-        element:<div></div>
-      }
-    ]
-  }
-])
+        path: "/home",
+        element: <div></div>,
+      },
+    ],
+  },
+]);
 function App() {
 
   return <RouterProvider router={router}/>

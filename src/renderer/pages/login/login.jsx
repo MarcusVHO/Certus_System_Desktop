@@ -1,6 +1,9 @@
+import { useAuth } from "../../hooks/authHook";
 import LoginForm from "./components/loginForm";
 
 export default function Login() {
+    const {loading, login, error} = useAuth()
+
     return (
       <section className="h-dvh">
         {/*---------------------------- fundo da dhl --------------------------------*/}
@@ -13,7 +16,7 @@ export default function Login() {
 
         {/*-------------------------- overlay branco  -------------------------------*/}
         <div className="relative h-full z-10 bg-white/60 flex flex-col items-center justify-center">
-          <LoginForm />
+          <LoginForm login={login} loading={loading} error={error}/>
         </div>
       </section>
     );
