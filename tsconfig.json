@@ -28,7 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/renderer/pages/pmd/program/programacao.jsx"  ],
   "exclude": [
     "node_modules"
   ]

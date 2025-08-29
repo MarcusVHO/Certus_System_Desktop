@@ -1,14 +1,14 @@
 import { SidebarItem } from "flowbite-react";
 
 
-export function ItemSidebarChildren({text, icon, func}) {
+export function ItemSidebarChildren({text, icon, func, active}) {
 
 
 
 
 
     return (
-        <SidebarItem icon={icon} onClick={func} className={`px-7 h-[36px]  hover:bg-gray-500/20 rounded-md w-full`}>
+        <SidebarItem icon={icon} onClick={func} className={`px-7 h-[36px] font-semibold hover:bg-gray-500/20 rounded-md w-full cursor-pointer ${active ? "bg-zinc-500/40" : ""}`}>
              
              {text}
 
@@ -16,14 +16,14 @@ export function ItemSidebarChildren({text, icon, func}) {
     )
 
 }
-export function ItemSidebar({text, icon, func}) {
+export function ItemSidebar({text, icon, func, active}) {
 
 
 
 
 
     return (
-        <SidebarItem icon={icon} onClick={func} className={`px-3 h-[46px]  hover:bg-gray-500/20 rounded-md w-full`}>
+        <SidebarItem icon={icon} onClick={func} className={`px-3 h-[46px] font-semibold hover:bg-gray-500/20 rounded-md cursor-pointer w-full ${active ? "bg-zinc-500/40" : ""}`}>
              
              {text}
 

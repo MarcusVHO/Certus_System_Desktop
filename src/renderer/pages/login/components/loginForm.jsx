@@ -1,17 +1,21 @@
 import { TextInput } from "flowbite-react";
 import {Button} from "../../../components/ui/button"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function LoginForm(props) {
     const [oneid, setOneid] = useState("")
     const [password, setPassword] = useState("")
     const [message, setMessage] = useState("")
+    const navigate = useNavigate()
 
     async function handleLogin(e) {
       e.preventDefault();
       const res = await props.login(oneid, password)
       if(res) {
         console.log("Usuário logado")
+        navigate("/home")
       }
     }
 
