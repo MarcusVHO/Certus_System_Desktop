@@ -1,12 +1,12 @@
 import { Calendar } from "@/components/ui/calendar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function DataPiker() {
   const [range, setRange] = useState<{ from?: Date; to?: Date }>({});
 
   const primeiraData = range.from;
   const segundaData = range.to;
-
+  console.log("1 - ", primeiraData, "2 - ", segundaData)
   return (
     <section className="flex-1 flex flex-col">
       <div className="flex">
@@ -23,6 +23,8 @@ export default function DataPiker() {
       </div>
 
       <div className="bg-white/80 border-b shadow-md flex-1 m-2 rounded-md "></div>
+
+     
     </section>
   );
 }
